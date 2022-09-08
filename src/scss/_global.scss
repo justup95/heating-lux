@@ -1,42 +1,65 @@
 // Container
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
 
-    @media (max-width: $breakpoint1450) {
-        max-width: 1200px;
-    }
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
 
-    @media (max-width: $breakpoint992) {
-        max-width: 970px;
-    }
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
 
-    @media (max-width: $breakpoint768) {
-        max-width: 740px;
-    }
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
 
-    @media (max-width: $breakpoint480) {
-        max-width: none;
-    }
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
 }
 
 // Body Locked
 body {
-    &.locked {
-        overflow: hidden;
-    }
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $orange;
+  border-radius: 8px;
+  width: 240px;
+  height: 54px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  &:hover {
+    opacity: 0.5;
+    transition: 0.3s all ease;
+  }
+  @media (max-width: 1200px) {
+    width: 200px;
+  }
 }
 
 // Animations
 // Fade
 @keyframes fade {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
